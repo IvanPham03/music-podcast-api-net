@@ -22,13 +22,156 @@ namespace MusicPodcast.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("MusicPodcast.Models.Album", b =>
+                {
+                    b.Property<string>("ID_Album")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("AlbumType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AvailableMarkets")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Images")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ReleaseDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("TotalTracks")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TrackID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID_Album");
+
+                    b.HasIndex("TrackID");
+
+                    b.ToTable("Album");
+                });
+
+            modelBuilder.Entity("MusicPodcast.Models.Artist", b =>
+                {
+                    b.Property<string>("ID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Genres")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Href")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Images")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Popularity")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TrackID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Uri")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("TrackID");
+
+                    b.ToTable("Artist");
+                });
+
+            modelBuilder.Entity("MusicPodcast.Models.ArtistFollower", b =>
+                {
+                    b.Property<string>("ID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ArtistID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Href")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Total")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("ArtistID");
+
+                    b.ToTable("ArtistFollower");
+                });
+
+            modelBuilder.Entity("MusicPodcast.Models.Track", b =>
+                {
+                    b.Property<string>("ID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("DurationMs")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Explicit")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsLocal")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Popularity")
+                        .HasColumnType("int");
+
+                    b.Property<string>("PreviewUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TrackNumber")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Uri")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Track");
+                });
+
             modelBuilder.Entity("MusicPodcast.Models.User", b =>
                 {
-                    b.Property<long>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("id"));
+                    b.Property<string>("ID")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("email")
                         .IsRequired()
@@ -57,9 +200,42 @@ namespace MusicPodcast.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("id");
+                    b.HasKey("ID");
 
                     b.ToTable("User");
+                });
+
+            modelBuilder.Entity("MusicPodcast.Models.Album", b =>
+                {
+                    b.HasOne("MusicPodcast.Models.Track", null)
+                        .WithMany("Album")
+                        .HasForeignKey("TrackID");
+                });
+
+            modelBuilder.Entity("MusicPodcast.Models.Artist", b =>
+                {
+                    b.HasOne("MusicPodcast.Models.Track", null)
+                        .WithMany("Artists")
+                        .HasForeignKey("TrackID");
+                });
+
+            modelBuilder.Entity("MusicPodcast.Models.ArtistFollower", b =>
+                {
+                    b.HasOne("MusicPodcast.Models.Artist", null)
+                        .WithMany("Followers")
+                        .HasForeignKey("ArtistID");
+                });
+
+            modelBuilder.Entity("MusicPodcast.Models.Artist", b =>
+                {
+                    b.Navigation("Followers");
+                });
+
+            modelBuilder.Entity("MusicPodcast.Models.Track", b =>
+                {
+                    b.Navigation("Album");
+
+                    b.Navigation("Artists");
                 });
 #pragma warning restore 612, 618
         }

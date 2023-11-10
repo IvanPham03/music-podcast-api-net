@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{2CBBC10F-9779-43F0-9FCE-8B836A9B3BCC}|Default">
+  <MonoDevelop.Ide.ItemProperties.MusicPodcast PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MusicPodcast/Helper/TrackMapper.cs">
+    <Files>
+      <File FileName="MusicPodcast/Domain/data/InitTrack.cs" />
+      <File FileName="MusicPodcast/Program.cs" />
+      <File FileName="MusicPodcast/Models/Artist.cs" />
+      <File FileName="MusicPodcast/Models/Album.cs" />
+      <File FileName="MusicPodcast/Models/ArtistFollower.cs" />
+      <File FileName="MusicPodcast/Models/Track.cs" />
+      <File FileName="MusicPodcast/Models/User.cs" />
+      <File FileName="../../../../../usr/local/share/dotnet/sdk/7.0.310/Microsoft.Common.CurrentVersion.targets" />
+      <File FileName="MusicPodcast/Migrations/20231110174945_initdb.cs" />
+      <File FileName="MusicPodcast/Helper/TrackMapper.cs" Line="2" Column="17" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MusicPodcast">
+            <Node name="MusicPodcast" expanded="True">
+              <Node name="Domain" expanded="True">
+                <Node name="data" expanded="True" />
+              </Node>
+              <Node name="Helper" expanded="True">
+                <Node name="TrackMapper.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Repositories" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

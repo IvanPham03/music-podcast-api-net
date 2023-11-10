@@ -1,27 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Workspace\\dotnet\\MusicPodcast\\MusicPodcast\\MusicPodcast.csproj": {}
+    "/Users/truongpham/workspace/net-project/music-podcast-api-net/MusicPodcast/MusicPodcast.csproj": {}
   },
   "projects": {
-    "C:\\Workspace\\dotnet\\MusicPodcast\\MusicPodcast\\MusicPodcast.csproj": {
+    "/Users/truongpham/workspace/net-project/music-podcast-api-net/MusicPodcast/MusicPodcast.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Workspace\\dotnet\\MusicPodcast\\MusicPodcast\\MusicPodcast.csproj",
+        "projectUniqueName": "/Users/truongpham/workspace/net-project/music-podcast-api-net/MusicPodcast/MusicPodcast.csproj",
         "projectName": "MusicPodcast",
-        "projectPath": "C:\\Workspace\\dotnet\\MusicPodcast\\MusicPodcast\\MusicPodcast.csproj",
-        "packagesPath": "C:\\Users\\DangTruongPham\\.nuget\\packages\\",
-        "outputPath": "C:\\Workspace\\dotnet\\MusicPodcast\\MusicPodcast\\obj\\",
+        "projectPath": "/Users/truongpham/workspace/net-project/music-podcast-api-net/MusicPodcast/MusicPodcast.csproj",
+        "packagesPath": "/Users/truongpham/.nuget/packages/",
+        "outputPath": "/Users/truongpham/workspace/net-project/music-podcast-api-net/MusicPodcast/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DangTruongPham\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/truongpham/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/local/share/dotnet/sdk/7.0.310/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,6 +39,18 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[5.1.1, )"
+            },
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[30.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.13, )"
@@ -50,9 +61,17 @@
               "target": "Package",
               "version": "[7.0.13, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
+            },
+            "System.Data.OleDb": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
@@ -74,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.310/RuntimeIdentifierGraph.json"
         }
       }
     }
