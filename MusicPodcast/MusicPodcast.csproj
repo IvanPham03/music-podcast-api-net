@@ -23,11 +23,11 @@
 
   <ItemGroup>
     <Folder Include="Repositories\" />
-    <Folder Include="Helper\" />
+    <Folder Include="Models\utils\" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="Repositories\" />
-    <None Remove="Helper\" />
+    <None Remove="Models\utils\" />
   </ItemGroup>
 </Project>

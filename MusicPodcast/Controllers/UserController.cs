@@ -1,7 +1,6 @@
 ﻿using MusicPodcast.Data;
 using Microsoft.AspNetCore.Mvc;
 
-
 namespace MusicPodcast.Controllers
 {
     [Route("api/[controller]")]

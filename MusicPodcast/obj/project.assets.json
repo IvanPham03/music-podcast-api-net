@@ -3591,26 +3591,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DangTruongPham\\.nuget\\packages\\": {}
+    "/Users/truongpham/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Workspace\\dotnet\\music-podcast-api-net\\MusicPodcast\\MusicPodcast.csproj",
+      "projectUniqueName": "/Users/truongpham/workspace/net-project/music-podcast-api-net/MusicPodcast/MusicPodcast.csproj",
       "projectName": "MusicPodcast",
-      "projectPath": "C:\\Workspace\\dotnet\\music-podcast-api-net\\MusicPodcast\\MusicPodcast.csproj",
-      "packagesPath": "C:\\Users\\DangTruongPham\\.nuget\\packages\\",
-      "outputPath": "C:\\Workspace\\dotnet\\music-podcast-api-net\\MusicPodcast\\obj\\",
+      "projectPath": "/Users/truongpham/workspace/net-project/music-podcast-api-net/MusicPodcast/MusicPodcast.csproj",
+      "packagesPath": "/Users/truongpham/.nuget/packages/",
+      "outputPath": "/Users/truongpham/workspace/net-project/music-podcast-api-net/MusicPodcast/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\DangTruongPham\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/truongpham/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "/usr/local/share/dotnet/sdk/7.0.310/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3687,7 +3686,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.310/RuntimeIdentifierGraph.json"
       }
     }
   }
